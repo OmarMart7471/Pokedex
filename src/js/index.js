@@ -2,9 +2,9 @@ const url_base = "https://pokeapi.co/api/v2/"
 const previous = document.querySelector("#previous");
 const next = document.querySelector("#next")
 
-let limit = 8;
+let limit = 100;
 let offset = 1;
-
+// funcion de botones para traer de 9 en 9
 previous.addEventListener("click", () => {
   if (offset != 1) {
     offset -= 9;
@@ -17,6 +17,7 @@ next.addEventListener("click", () => {
   getPokemons(offset, limit);
 });
 
+//funcion  fetch para traer u pokemon por ID
 const getPokemon = async (id) => {
     try {
       const response = await fetch(`${url_base}pokemon/${id}`)
@@ -36,3 +37,9 @@ function getPokemons(offset, limit) {
 }
 
 getPokemons(offset,limit);
+
+//funcio para traer tipo de api
+
+const getTypes = async()=>{
+  const types = await fetch(`${url_base}/type`)
+}
