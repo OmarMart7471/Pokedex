@@ -19,13 +19,13 @@ next.addEventListener("click", () => {
 
 //funcion  fetch para traer u pokemon por ID
 const getPokemon = async (id) => {
-    try {
-      const response = await fetch(`${url_base}pokemon/${id}`)
-      const data = await response.json()
-      return console.log(data)
-    } catch (error) {
-      console.error(error)
-      return error  
+  try {
+    const response = await fetch(`${url_base}pokemon/${id}`)
+    const data = await response.json()
+    return data
+  } catch (error) {
+    console.error(error)
+    return error
   }
 
 }
@@ -36,10 +36,14 @@ function getPokemons(offset, limit) {
   }
 }
 
-getPokemons(offset,limit);
+getPokemons(offset, limit);
 
-//funcio para traer tipo de api
+//funcion para traer los colores por pokemon
 
-const getTypes = async()=>{
-  const types = await fetch(`${url_base}/type`)
+const getPokemonColor = async (id) => {
+  const response = await fetch(`${url_base}pokemon-color/${id}`)
+  const data = await response.json()
+
+  return console.log(data.pokemon_species)
 }
+getPokemonColor(1);
