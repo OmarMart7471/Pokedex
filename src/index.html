@@ -43,8 +43,11 @@
       </ul>
     </nav>
     <main>
-        <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-          <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+      
+        <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12" id="mainContent">
+
+
+          <!-- <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
             <a href="#">
                 <img class="hover:grow hover:shadow-lg rounded-lg shadow-inner border-4 border-red-500" 
                 src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80"
@@ -52,33 +55,6 @@
                 href="#offcanvasBottom" 
                 role="button" 
                 aria-controls="offcanvasBottom">
-
-                <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-                  <div class="offcanvas-header">
-                    <h5 class="offcanvas-title font-sans text-2xl font-black uppercase" id="offcanvasBottomLabel">Nombre pokemon</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                  </div>
-                  <div class="offcanvas-body small flex flex-grow flex-row mx-3">
-
-                      <div class="basis-40 flex justify-center p-1 object-cover" id="photo">
-
-                        <img src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80"
-                         alt="" 
-                         class="d-block rounded-lg border-2 border-red-500">
-
-                      </div>
-
-                      <div class="basis-48 bg-stone-300 flex " id="content">
-
-                        <span class="gap-1 self-center mt-1 list-group-item list-group-item-action justify-between justify-content-between align-items-center text-bg-dark text-left px-4 py-2 border border-2 border-primary rounded-pill w-48 h-10">
-                          XP
-                          <span class="order-last gap-1 px-1 py-1 w-1 h-1 text-bg-dark p-3 border border-2 border-primary rounded-pill">99</span>
-                        </span>
-
-                      </div>
-
-                  </div>
-                </div>
 
                 <div class="pt-3 flex items-center ">
                   <a class="flex justify-between py-1.5 px-1.5 flex-wrap grow text-black border-4 border-red-500 text-sm shadow-lg gap-3 rounded-lg">
@@ -95,10 +71,75 @@
                       
                   </a>
                 </div>
-            </a>
-          </div>
+             </a> 
+          </div> -->
+          
+          
+
+          <!--
+                  
+                <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title font-sans text-2xl font-black uppercase" id="offcanvasBottomLabel">Nombre pokemon</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body small flex flex-grow flex-row mx-3 justify-center">
+
+                      <div class="basis-40 flex justify-center p-1 object-cover" id="photo">
+
+                        <img src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80"
+                         alt="" 
+                         class="d-block rounded-lg border-2 border-red-500">
+
+                      </div>
+
+                      <div class="basis-64 flex flex-wrap" id="content">
+
+                        <span class="d-flex mt-1 list-group-item list-group-item-action justify-content-between align-items-center text-sm text-left px-4 py-2 border-2 border-rose-500 rounded-pill w-32 h-10">
+                          <p>ID</p>
+                          <span class="badge rounded-pill text-bg-danger">99</span>
+                        </span>
+
+                        <span class="d-flex mt-1 list-group-item list-group-item-action justify-content-between align-items-center text-sm text-left px-4 py-2 border-2 border-rose-500 rounded-pill w-32 h-10">
+                          <p>Base xp</p>
+                          <span class="badge rounded-pill text-bg-danger">99</span>
+                        </span>
+
+                        <span class="d-flex mt-1 list-group-item list-group-item-action justify-content-between align-items-center text-sm text-left px-4 py-2 border-2 border-rose-500 rounded-pill w-32 h-10">
+                          <p>Peso</p>
+                          <span class="badge rounded-pill text-bg-danger">99</span>
+                        </span>
+
+                        <span class="d-flex mt-1 list-group-item list-group-item-action justify-content-between align-items-center text-sm text-left px-4 py-2 border-2 border-rose-500 rounded-pill w-32 h-10">
+                          <p>Order</p>
+                          <span class="badge rounded-pill text-bg-danger">99</span>
+                        </span>
+
+                      </div>
+
+                      <div class="basis-64 mx-3 flex flex-wrap">
+
+                        <span class="mt-1 list-group-item list-group-item-action justify-content-between align-items-center text-sm px-4 py-2 bg-gradient-to-r from-yellow-400 to-green-500 border-2 border-yellow-500 rounded-pill w-32 h-10">
+                          <p class="text-center text-xs">HABILIDAD 1</p>
+                        </span>
+
+                        <span class="mt-1 list-group-item list-group-item-action justify-content-between align-items-center text-sm px-4 py-2 bg-gradient-to-r from-yellow-400 to-green-500 border-2 border-yellow-500 rounded-pill w-32 h-10">
+                          <p class="text-center text-xs">HABILIDAD 1</p>
+                        </span>
+
+                        <span class="mt-1 list-group-item list-group-item-action justify-content-between align-items-center text-sm px-4 py-2 bg-gradient-to-r from-yellow-400 to-green-500 border-2 border-yellow-500 rounded-pill w-32 h-10">
+                          <p class="text-center text-xs">HABILIDAD 1</p>
+                        </span>
+
+                      </div>
+
+                  </div>
+                </div>
+                -->
           
         </div>
+
+        
     </main>
    <script src="./js/index.js"></script> 
 </body>
@@ -107,4 +148,5 @@
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" 
     crossorigin="anonymous">
     </script>
+    <script src="./js/index.js"></script>
 </html>
