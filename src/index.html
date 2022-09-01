@@ -37,29 +37,58 @@
         <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
           <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
             <a href="#">
-                <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
+                <img class="hover:grow hover:shadow-lg rounded-lg shadow-inner border-4 border-red-500" 
+                src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80"
+                data-bs-toggle="offcanvas"
+                href="#offcanvasBottom" 
+                role="button" 
+                aria-controls="offcanvasBottom">
+
+                <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title font-sans text-2xl font-black uppercase" id="offcanvasBottomLabel">Nombre pokemon</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body small flex flex-grow flex-row mx-3">
+
+                      <div class="basis-40 flex justify-center p-1 object-cover" id="photo">
+
+                        <img src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80"
+                         alt="" 
+                         class="d-block rounded-lg border-2 border-red-500">
+
+                      </div>
+
+                      <div class="basis-48 bg-stone-300 flex " id="content">
+
+                        <span class="gap-1 self-center mt-1 list-group-item list-group-item-action justify-between justify-content-between align-items-center text-bg-dark text-left px-4 py-2 border border-2 border-primary rounded-pill w-48 h-10">
+                          XP
+                          <span class="order-last gap-1 px-1 py-1 w-1 h-1 text-bg-dark p-3 border border-2 border-primary rounded-pill">99</span>
+                        </span>
+
+                      </div>
+
+                  </div>
+                </div>
+
+                <div class="pt-3 flex items-center ">
+                  <a class="flex justify-between py-1.5 px-1.5 flex-wrap grow text-black border-4 border-red-500 text-sm shadow-lg gap-3 rounded-lg">
+
+                    <div class="order-first mt-1">
+                      <p class="font-semibold uppercase">Nombre</p>
+                    </div>
+                    
+                    <div class="order-last mt-1">
+                      <span class="badge text-bg-secondary">xp</span>
+                      <span class="badge text-bg-secondary">types</span>
+                      <span class="badge text-bg-secondary">generation</span>
+                    </div>
+                      
+                  </a>
+                </div>
             </a>
           </div>
-          <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-            <a href="#">
-                <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-            </a>
-          </div>
-          <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-            <a href="#">
-                <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-            </a>
-          </div>
-          <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-            <a href="#">
-                <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-            </a>
-          </div>
-          <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-            <a href="#">
-                <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-            </a>
-          </div>
+          
         </div>
     </main>
     
