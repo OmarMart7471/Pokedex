@@ -1,30 +1,25 @@
-const url_base = "https://pokeapi.co/api/v2/"
-const previous = document.querySelector("#previous");
-const next = document.querySelector("#next")
+const url_base = "https://pokeapi.co/api/v2/";
 
-let limit = 100;
+let limit = 99;
 let offset = 1;
-// funcion de botones para traer de 9 en 9
-previous.addEventListener("click", () => {
-  if (offset != 1) {
-    offset -= 9;
-    getPokemons(offset, limit);
-  }
-});
 
-next.addEventListener("click", () => {
-  offset += 9;
-  getPokemons(offset, limit);
-});
 
 
 let list = []
+
+function hideSpinner() {
+  document.getElementById('spinner')
+          .style.display = 'none';
+}
 
 //funcion  fetch para traer u pokemon por ID
 const getPokemon = async (id) => {
     try {
       const response = await fetch(`${url_base}pokemon/${id}`)
       const data = await response.json()
+      if (response) {
+        hideSpinner();
+    }
       /*let pokemonObj = {
         "name":data.name,
         "image":data.sprites.front_default,
@@ -47,6 +42,7 @@ const getPokemon = async (id) => {
           imgElement.setAttribute("href","#offcanvasBottom")
           imgElement.setAttribute("role","button")
           imgElement.setAttribute("aria-controls","offcanvasBottom")
+          imgElement.setAttribute("loading","lazy")
         aHref.appendChild(imgElement)
        let divItemsCenter = document.createElement("div")
            divItemsCenter.setAttribute("class","pt-3 flex items-center")
@@ -106,4 +102,4 @@ getPokemonColor(1);
 
 getPokemons(offset,limit);
 //console.log(list)
-renderList()
+//renderList()
