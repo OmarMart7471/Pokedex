@@ -1,5 +1,4 @@
 const url_base = "https://pokeapi.co/api/v2/"
-<<<<<<< HEAD
 const previous = document.querySelector("#previous");
 const next = document.querySelector("#next")
 
@@ -18,19 +17,6 @@ next.addEventListener("click", () => {
   getPokemons(offset, limit);
 });
 
-//funcion  fetch para traer u pokemon por ID
-const getPokemon = async (id) => {
-  try {
-    const response = await fetch(`${url_base}pokemon/${id}`)
-    const data = await response.json()
-    return data
-  } catch (error) {
-    console.error(error)
-    return error
-=======
-
-let limit = 200;
-let offset = 1;
 
 let list = []
 
@@ -94,7 +80,6 @@ const getPokemon = async (id) => {
     } catch (error) {
       console.error(error)
       return error  
->>>>>>> 64f5af389379befd950889ba19f88e78de6faaaa
   }
 
 }
@@ -105,7 +90,7 @@ function getPokemons(offset, limit) {
   }
 }
 
-<<<<<<< HEAD
+
 getPokemons(offset, limit);
 
 //funcion para traer los colores por pokemon
@@ -117,11 +102,8 @@ const getPokemonColor = async (id) => {
   return console.log(data.pokemon_species)
 }
 getPokemonColor(1);
-=======
 
 
 getPokemons(offset,limit);
 //console.log(list)
 renderList()
-
->>>>>>> 64f5af389379befd950889ba19f88e78de6faaaa
